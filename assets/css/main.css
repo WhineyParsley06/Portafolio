@@ -3931,4 +3931,53 @@ input, select, textarea {
 			border-bottom: none !important;
 		}
 		
+		.sidebar-profile-img {
+			width: 100%;
+			max-width: 150px;
+			height: auto;
+			border-radius: 50%;
+			border: 3px solid white;
+			display: block;
+			margin: 0 auto;
+			object-fit: cover;
+			overflow: visible;
+		}
+		#sidebar {
+			overflow: visible; /* Esto evita que corte el contenido */
+		}
+		#sidebar .inner {
+			padding-bottom: 520px; /* Puedes ajustar este valor hasta que te guste */
+			overflow: visible; /* También evita que el contenedor corte el círculo */
+			
+		}
+		#sidebar::after {
+			content: "";
+			display: block;
+			height: 1px;
+			background: rgba(255,255,255,0.2);
+			margin-top: 20px; /* Puedes aumentar este valor para bajarla */
+		}
+		.perfil-sidebar {
+			width: 100%;
+			max-width: 150px;
+			height: auto;
+			border-radius: 50%;
+			border: 3px solid white;
+			object-fit: cover;
+			transition: all 0.3s ease;
+			margin-right: 20px; /* Ajusta este valor hasta que quede a tu gusto */
+
+		}
+		
+		@media (max-width: 1300px) {
+			.perfil-sidebar {
+				max-width: 60px;  /* Se hará más pequeña automáticamente */
+				
+			}
+		}
+		
+		
+		
+		
+		
 		

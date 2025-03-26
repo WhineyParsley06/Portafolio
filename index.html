@@ -5,6 +5,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<style>
+		a img {
+			border: none;
+			text-decoration: none;
+			display: inline-block;
+		}
+		a {
+			text-decoration: none;
+		}
+	</style>
 	<head>
 		<title>Portafolio David Valderrama</title>
 		<meta charset="utf-8" />
@@ -20,13 +30,16 @@
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
+					<div style="text-align: center; margin-bottom: 20px;">
+						<img src="images/Perfil3.png" alt="Libro" style="width: 180px; height: 180px; border-radius: 50%; border: 3px solid white; object-fit: cover;">
+					</div>
+					
 					<nav>
 						<ul>
-							<li><a href="#intro">Bienvenido</a></li>
-							<li><a href="#about">Sobre mí</a></li>
+							<li><a href="#intro">Inicio</a></li>
 							<li><a href="#one">Mis proyectos</a></li>
-							<li><a href="#two">Lo que hago</a></li>
-							<li><a href="#three">Contacto</a></li>
+							<li><a href="#about">Sobre mí</a></li>
+							
 						</ul>
 					</nav>
 				</div>
@@ -36,12 +49,12 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-				<section id="intro" class="wrapper style1 fullscreen fade-up" style="background: url('images/fondo.gif') no-repeat right center; background-size: contain;">
+				<section id="intro" class="wrapper style1 fullscreen fade-up" style="background: no-repeat right center; background-size: contain;">
 
 					<div class="inner" style="display: flex; align-items: center; justify-content: space-between; gap: 50px; flex-wrap: nowrap; width: 100%;">
 						<div>
 							<div style="border: 4px solid rgb(255, 255, 255);background-color: rgb(0, 0, 0); padding: 15px; border-radius: 10px; display: inline-block;">
-								<h1 style="font-size: 3rem; color: #ad4897; margin: 0;">¡Bienvenido, mi nombre es<br><span style="color: #35578f;">David Valderrama</span>!</h1>
+								<h1 style="font-size: 3rem; color: #ad4897; margin: 0;">Bienvenido, mi nombre es<br><span style="color: #35578f;">David Valderrama</span></h1>
 							</div>
 							
 							<div style="border: 4px solid rgb(255, 255, 255); background-color: rgb(0, 0, 0); padding: 10px; border-radius: 10px; display: inline-block; margin-top: 10px;">
@@ -52,17 +65,22 @@
 								<p style="font-size: 1.2rem; color: white; margin: 0;">Unity | C# | HTML | CSS | SQL | Bases de Datos | Illustrator</p>
 							</div>
 							
+							
 							<div style="margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
 								<div style="display: inline-block; padding: 3px; border-radius: 15px; background: linear-gradient(90deg, #ff00ff, #00ffff);">
 									<a href="https://www.linkedin.com/in/david-valderrama-mosquera-game-developer/" style="padding: 10px 20px; border-radius: 12px; background-color: #0a0a23; color: white; text-decoration: none; display: inline-block;">LinkedIn</a>
 								</div>
 
 								<div style="display: inline-block; padding: 3px; border-radius: 15px; background: linear-gradient(90deg, #ff00ff, #00ffff);">
-								<a href="https://github.com/WhineyParsley06" style="padding: 10px 20px; border-radius: 12px; background-color: #0a0a23; color: white; text-decoration: none; display: inline-block;">Github</a>
+									<a href="https://github.com/WhineyParsley06" style="padding: 10px 20px; border-radius: 12px; background-color: #0a0a23; color: white; text-decoration: none; display: inline-block;">Github</a>
 								</div>
 
 								<div style="display: inline-block; padding: 3px; border-radius: 15px; background: linear-gradient(90deg, #ff00ff, #00ffff);">
 									<a href="https://whineyparsley06.itch.io//" style="padding: 10px 20px; border-radius: 12px; background-color: #0a0a23; color: white; text-decoration: none; display: inline-block;">Itch.io</a>
+								</div>
+
+								<div style="display: inline-block; padding: 3px; border-radius: 15px; background: linear-gradient(90deg, #ff00ff, #00ffff);">
+									<a href="https://play.unity.com/en/user/e7b05f64-c779-4fa8-9d79-8ca53c643403" style="padding: 10px 20px; border-radius: 12px; background-color: #0a0a23; color: white; text-decoration: none; display: inline-block;">Unity</a>
 								</div>
 							
 								
@@ -74,160 +92,148 @@
 						</div>
 					</div>
 				</section>
-				<!-- About -->
-				<section id="about" class="wrapper style1 fade-up" style="position: relative; overflow: hidden;">
+				<video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+					<source src="videos/Video1.mp4" type="video/mp4">
+				</video>
+				
+				<!-- One -->
+				<section id="one" class="wrapper style1 fade-up" style="background: no-repeat right center; background-size: contain; min-height: 100vh; padding-top: 60px; padding-bottom: 60px; position: relative;">
+					<img src="images/fondo2.gif" alt="Fondo animado" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
 
-					<video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-						<source src="videos/fondo.mp4" type="video/mp4">
-					</video>
-					<div class="inner" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-						<div>
-							<img src="images/Perfil2.png" alt="Sobre mí" style="max-width: 200px; border-radius: 20px;">
+					<div style="display: flex; justify-content: left; margin-bottom: 40px;">
+						<div style="border: 5px solid rgb(255, 255, 255); background-color: rgba(0, 0, 0, 1); border-radius: 15px; padding: 20px; display: inline-block; margin: 20px;">
+							<h2 style="font-size: 3.5rem; color: #ffcc00; margin: 0; text-align: left;">
+								Mis Proyectos
+							</h2>
+							<h1 style="font-size: 2rem; color: #ffffff; margin: 0; text-align: left;">
+								Estos son Proyectos que he realizado en mi proceso de desarrollo y aprendizaje
+							</h1>
 						</div>
-						<div style="max-width: 700px;">
-							<h2 style="font-size: 2.5rem; color: #c83efc;">Sobre mí</h2>
-							<p style="font-size: 1.2rem; color: white;">
-								Desarrollador en Unity con entusiasmo por aprender y crear experiencias interactivas. Poseo conocimientos sólidos en C#, .NET, y me encanta diseñar proyectos interactivos y visualmente atractivos. <br><br>
-								Soy estudiante de Ingeniería de Sistemas y busco siempre adaptarme a nuevos retos y entornos de trabajo.
-							</p>
-							<h3 style="color: #c83efc;">Habilidades:</h3>
-							<ul style="list-style: none; padding: 0; color: white;">
-								<li>🎮 Desarrollo de videojuegos con Unity y C#.</li>
-								<li>🗄️ Gestión de bases de datos SQL.</li>
-								<li>🌐 Creación de páginas web con HTML y CSS.</li>
-								<li>🎨 Diseño gráfico en Illustrator.</li>
-							</ul>
-							<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
-								<!-- Span con el logo SVG de Unity, animación y efecto al pasar el mouse -->
-								<span style="background-color: black; color: white; padding: 5px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,0,255,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-									<img src="images/Unity.svg" alt="Unity" style="width: 22px; height: 22px;"> Unity
-								</span>
-								
-								
-								
-								
-							<!-- Span con el logo SVG de Python -->
-								<span style="background-color: #306998; color: white; padding: 5px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(0,123,255,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-									<img src="images/Python.svg" alt="Python" style="width: 22px; height: 22px;"> Python
-								</span>
-								
-								<!-- Span con el logo SVG de Metasploit -->
-								<span style="background-color: #4d4d4d; color: white; padding: 5px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,255,255,0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-									<img src="images/Metasploit.svg" alt="Metasploit" style="width: 22px; height: 22px;"> Metasploit
-								</span>
-								
-								<!-- Span con el logo SVG de Swift -->
-								<span style="background-color: #f05138; color: white; padding: 5px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,165,0,0.5)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-									<img src="images/Swift.svg" alt="Swift" style="width: 22px; height: 22px;"> Swift
-								</span>
+					</div>
+					
+					
+
+				
+					<div class="inner" style="position: relative; z-index: 1; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-bottom: 80px; padding-bottom: 40px;">
+						<!-- Proyecto 1 -->
+						<div style="border: 3px solid yellow; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px; padding: 20px; width: 300px; color: white; text-align: center;">
+							<img src="https://img.itch.zone/aW1nLzE5ODUwMDM2LnBuZw==/315x250%23c/NhIxW%2F.png" alt="Zombie Run" style="width: 100%; border-radius: 10px;">
+							<h3 style="color: #ffcc00; margin-top: 10px;">Juego Zombie Run</h3>
+							<p>Este es el primer juego que realicé en Unity. Consiste en destruir esferas, y si aciertas con el color incorrecto, ¡se multiplican!</p>
+							<a href="https://whineyparsley06.itch.io/enero-23" target="_blank"
+							style="display: inline-block; margin-top: 10px; background-color: #ffcc00; color: black; padding: 8px 16px; border-radius: 8px; text-decoration: none;">Jugar</a>
+						</div>
+				
+						<!-- Proyecto 2 -->
+						<div style="border: 3px solid yellow; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px; padding: 20px; width: 300px; color: white; text-align: center;">
+							<img src="https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/6458d604829148153fb7cd52_codigo-python-beautiful-soup-p-800.jpg" alt="Click_and_safe.py" style="width: 100%; border-radius: 10px;">
+							<h3 style="color: #ffcc00; margin-top: 10px;">Click_and_safe.py</h3>
+							<p>Proyecto en Python para automatizar clics definidos por el usuario. Útil para tareas repetitivas y eficiencia.</p>
+							<a href="https://github.com/WhineyParsley06/Save-and-click-program" target="_blank"
+							style="display: inline-block; margin-top: 10px; background-color: #ffcc00; color: black; padding: 8px 16px; border-radius: 8px; text-decoration: none;">Repositorio</a>
 						</div>
 					</div>
 				</section>
 				
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="https://img.itch.zone/aW1nLzE5ODUwMDM2LnBuZw==/315x250%23c/NhIxW%2F.png" alt="Juego Zombie Run" data-position="center center" /></a>
+				
+				<!-- About -->
+					
+				<section id="about" class="wrapper style1 fade-up" style="background: no-repeat right center; background-size: contain; min-height: 100vh; padding-top: 60px; padding-bottom: 60px; position: relative;">
+					
+					<img src="images/fondo1.gif" alt="Fondo animado" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
 
-							<div class="content">
-								<div class="inner">
-									<h2>Juego Zombie Run</h2>
-									<p>Este es el primer juego que realize en unity el cual consiste en que entre si destruye mas esferas de con la bala en el color incorrecto las esferas se multiplican</p>
-									<ul class="actions">
-										<li><a href="https://whineyparsley06.itch.io/enero-23" class="button">Jugar</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/6458d604829148153fb7cd52_codigo-python-beautiful-soup-p-800.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Click_and_safe.py</h2>
-									<p>Proyecto en Python desarrollado por mi el cual consiste en presionar de manera automatica los clicks preestablecidos por el usuario de manera automatica</p>
-									<ul class="actions">
-										<li><a href="https://github.com/WhineyParsley06/Save-and-click-program" class="button">Repositorio Archivo_click_and_safe</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+					
+						
+						
+					<div style="border: 3px solid yellow; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px; padding: 30px; width: 85%; margin: 30px auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+						<div style="flex: 1; min-width: 300px; text-align: center;">
+							<img src="images/Perfil1.png" alt="Foto de perfil" style="width: 200px; height: 200px; border-radius: 50%; border: 4px solid yellow; object-fit: cover; margin-bottom: 20px;">
+						<p style="color: white; font-size: 1.1rem; text-align: left;">
+							Mi nombre es David Valderrama Mosquera. Soy desarrollador de videojuegos y estudiante de Ingeniería de Sistemas.<br><br>
+							Me especializo en el desarrollo de juegos 2D y 3D utilizando herramientas como:<br><br>
+							<strong>| C# | Unity 6 | Python | HTML | GitHub |</strong><br><br>
+							Mi enfoque principal es crear experiencias únicas e inmersivas que cautiven a los jugadores.
+						</p>
+						<h4 style="color: yellow; margin-top: 15px; text-align: left;">Habilidades:</h4>
+						<ul style="list-style: none; padding: 0; color: white; font-size: 1rem; line-height: 1.8; text-align: left;">
+							<li>🎮 Desarrollo de videojuegos con Unity y C#.</li>
+							<li>🛡 Gestión de herramientas en Kali Linux.</li>
+							<li>🌐 Creación de páginas web con HTML y CSS.</li>
+							<li>🐍 Creación de Scripts en Python.</li>
+						</ul>
+						<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; justify-content: start;">
+							<span style="background-color: black; color: white; padding: 4px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" 
+								onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,0,255,0.5)';" 
+								onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+									<img src="images/Unity.svg" alt="Unity" style="width: 20px; height: 20px;"> Unity
+							</span>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Quien soy yo</h2>
-							<p>Me especialicé en el desarrollo de videojuegos con Unity, habil en idiomas de programacion como Python | C# | Swift</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-graduation-cap"></span>
-									<h3>Ingeniero en Sistemas</h3>
-									<p>Estudiante de la Universidad Tecnologica de Pereira</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-laptop-code"></span>
-									<h3>Herramientas de Programacion</h3>
-									<p>Desarollador en Unity | Python | C# | Swift</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-graduation-cap"></span>
-									<h3>Graduado de Generation Colombia</h3>
-									<p>Complete el Bootcamp de la academia Generation para ser desarrollador en Unity</p>
-								</section>
-								
-								
-								
-							</div>
+							<span style="background-color: #306998; color: white; padding: 4px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" 
+								onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(0,123,255,0.5)';" 
+								onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+									<img src="images/Python.svg" alt="Python" style="width: 20px; height: 20px;"> Python
+							</span>
+
+							<span style="background-color: #4d4d4d; color: white; padding: 4px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" 
+								onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,255,255,0.4)';" 
+								onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+									<img src="images/Metasploit.svg" alt="Metasploit" style="width: 20px; height: 20px;"> Metasploit
+							</span>
+							<span style="background-color: #f05138; color: white; padding: 4px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" 
+								onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255,165,0,0.5)';" 
+								onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+									<img src="images/Swift.svg" alt="Swift" style="width: 20px; height: 20px;"> Swift
+							</span>
+						</div>
+						</div>
+						<div style="flex: 1; min-width: 250px; text-align: center; border-left: 3px solid yellow; padding-left: 20px;">
+							<h3 style="color: yellow; font-size: 2rem;">Sígueme</h3>
+							<div style="display: flex; justify-content: center; gap: 25px; margin-top: 20px;">
+								<a href="https://www.facebook.com/WhineyParsley06/" target="_blank"
+								onmouseover="this.children[0].style.transform='scale(1.1)'; this.children[0].style.filter='drop-shadow(0 0 15px yellow)';" 
+								onmouseout="this.children[0].style.transform='scale(1)'; this.children[0].style.filter='none';">
+								<img src="images/Facebook.svg" style="width: 80px; height: 80px; border-radius: 50%; transition: transform 0.2s ease, filter 0.2s ease;">
+								</a>
+
+						
+								<a href="https://www.instagram.com/whineyparsley06/" target="_blank"
+								onmouseover="this.children[0].style.transform='scale(1.1)'; this.children[0].style.filter='drop-shadow(0 0 15px yellow)';" 
+								onmouseout="this.children[0].style.transform='scale(1)'; this.children[0].style.filter='none';">
+								<img src="images/Instagram.svg" style="width: 80px; height: 80px; border-radius: 50%; transition: transform 0.2s ease, filter 0.2s ease;">
+								</a>
 							
-						</div>
-					</section>
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contacto</h2>
-							<p></p>
-							<div class="split style1">
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Pereira, Risaralda<br />
-											
-											Colombia</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">deivid870@hotmail.com</a>
-										</li>
-										<li>
-											<h3>Telefono</h3>
-											<span>+57 3144652620</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												
-												<li><a href="https://www.facebook.com/WhineyParsley06/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="https://github.com/WhineyParsley06" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/david-valderrama-mosquera-game-developer/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
+								<a href="https://x.com/WhineyParsley06" target="_blank"
+								onmouseover="this.children[0].style.transform='scale(1.1)'; this.children[0].style.filter='drop-shadow(0 0 15px yellow)';" 
+								onmouseout="this.children[0].style.transform='scale(1)'; this.children[0].style.filter='none';">
+								<img src="images/Twitter.svg" style="width: 80px; height: 80px; border-radius: 50%; transition: transform 0.2s ease, filter 0.2s ease;">
+								</a>
+
+								
+								
+
 							</div>
+
+							<div class="contact-info" style="margin-top: 40px; color: white; text-align: center;">
+								<h3 style="color: yellow; font-size: 1.5rem; margin-bottom: 10px;">Contacto</h3>
+								<p style="margin: 5px 0; font-size: 1rem;">📧 deivid870@hotmail.com</p>
+								<p style="margin: 5px 0; font-size: 1rem;">📞 +57 3144652620</p>
+								<p style="margin: 5px 0; font-size: 1rem;">📍 Pereira, Colombia</p>
+							</div>
+						
 						</div>
-					</section>
+						</div>
+		
+					
+				</section>
+				
+				
+
+				
+				
 
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+	
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

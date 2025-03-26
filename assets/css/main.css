@@ -3907,3 +3907,28 @@ input, select, textarea {
 			}
 
 		}
+		#about video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+		#about .inner {
+			position: relative;
+			z-index: 1;
+		}
+
+		
+		a img {
+			border: none;
+			text-decoration: none;
+			display: inline-block;
+		}
+		a {
+			border-bottom: none !important;
+		}
+		
+		

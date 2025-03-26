@@ -25,6 +25,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Sidebar -->
@@ -39,6 +40,9 @@
 							<li><a href="#intro">Inicio</a></li>
 							<li><a href="#one">Mis proyectos</a></li>
 							<li><a href="#about">Sobre mí</a></li>
+							<li><a href="#" id="idioma-toggle" onclick="cambiarIdioma()">English Version</a></li>
+
+
 							
 						</ul>
 					</nav>
@@ -62,7 +66,7 @@
 							</div>
 							
 							<div style="border: 4px solid rgb(255, 255, 255);background-color: rgb(0, 0, 0); padding: 10px; border-radius: 10px; display: inline-block; margin-top: 10px;">
-								<p style="font-size: 1.2rem; color: white; margin: 0;">Unity | C# | HTML | CSS | SQL | Bases de Datos | Illustrator</p>
+								<p style="font-size: 1.2rem; color: white; margin: 0;">Unity | C# | HTML | Python | Swift | Kali</p>
 							</div>
 							
 							
@@ -119,7 +123,7 @@
 						<div style="border: 3px solid yellow; background-color: rgba(0, 0, 0, 0.7); border-radius: 15px; padding: 20px; width: 300px; color: white; text-align: center;">
 							<img src="https://img.itch.zone/aW1nLzE5ODUwMDM2LnBuZw==/315x250%23c/NhIxW%2F.png" alt="Zombie Run" style="width: 100%; border-radius: 10px;">
 							<h3 style="color: #ffcc00; margin-top: 10px;">Juego Zombie Run</h3>
-							<p>Este es el primer juego que realicé en Unity. Consiste en destruir esferas, y si aciertas con el color incorrecto, ¡se multiplican!</p>
+							<p>Este es el primer juego que realicé en Unity. Consiste en que el zombie destruya todas las esferas y si estas te tocan se multiplican</p>
 							<a href="https://whineyparsley06.itch.io/enero-23" target="_blank"
 							style="display: inline-block; margin-top: 10px; background-color: #ffcc00; color: black; padding: 8px 16px; border-radius: 8px; text-decoration: none;">Jugar</a>
 						</div>
@@ -244,5 +248,63 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+			
+			
+
+			<script>
+			function cambiarIdioma() {
+	const textosEspanol = {
+		'Bienvenido, mi nombre es': 'Welcome, my name is',
+		'Desarrollador de Videojuegos': 'Video Game Developer',
+		'Estos son Proyectos que he realizado en mi proceso de desarrollo y aprendizaje': 'These are projects I have developed during my learning process',
+		'Juego Zombie Run': 'Zombie Run Game',
+		'Este es el primer juego que realicé en Unity. Consiste en que el zombie destruya todas las esferas y si estas te tocan se multiplican': 'This is the first game I made in Unity. It consists in the zombie being chased by spheres and if they touch you they multiply',
+		'Jugar': 'Play',
+		'Click_and_safe.py': 'Click_and_safe.py',
+		'Proyecto en Python para automatizar clics definidos por el usuario. Útil para tareas repetitivas y eficiencia.': 'Python project to automate clicks defined by the user. Useful for repetitive tasks and efficiency.',
+		'Repositorio': 'Repository',
+		'Mis Proyectos': 'My Projects',
+		'Mi nombre es David Valderrama Mosquera. Soy desarrollador de videojuegos y estudiante de Ingeniería de Sistemas.': 'My name is David Valderrama Mosquera. I am a video game developer and a Systems Engineering student.',
+		'Me especializo en el desarrollo de juegos 2D y 3D utilizando herramientas como:': 'I specialize in developing 2D and 3D games using tools such as:',
+		'Mi enfoque principal es crear experiencias únicas e inmersivas que cautiven a los jugadores.': 'My main focus is to create unique and immersive experiences that captivate players.',
+		'Habilidades:': 'Skills:',
+		'Desarrollo de videojuegos con Unity y C#.': 'Video game development with Unity and C#.',
+		'Gestión de herramientas en Kali Linux.': 'Tool management in Kali Linux.',
+		'Creación de páginas web con HTML y CSS.': 'Web page creation with HTML and CSS.',
+		'Creación de Scripts en Python.': 'Script creation in Python.',
+		'Sígueme': 'Follow me',
+		'Contacto': 'Contact',
+		'Inicio': 'Home',
+		'Mis proyectos': 'My Projects',
+		'Sobre mí': 'About me',
+		'Versión en Español': 'English Version',
+		'English Version': 'Versión en Español'
+	};
+
+	const textosIngles = Object.fromEntries(Object.entries(textosEspanol).map(([k, v]) => [v, k]));
+
+	const boton = document.getElementById('idioma-toggle');
+	const idiomaActual = boton.textContent.trim();
+	const diccionarioActual = idiomaActual === 'English Version' ? textosEspanol : textosIngles;
+
+	document.querySelectorAll('*').forEach(elemento => {
+		elemento.childNodes.forEach(node => {
+			if (node.nodeType === 3) {
+				const textoOriginal = node.textContent.trim();
+				if (diccionarioActual[textoOriginal]) {
+					node.textContent = diccionarioActual[textoOriginal];
+				}
+			}
+		});
+	});
+
+	// Cambiar el texto del botón
+	boton.textContent = idiomaActual === 'English Version' ? 'Versión en Español' : 'English Version';
+}
+
+			</script>
+			
+				
 	</body>
 </html>

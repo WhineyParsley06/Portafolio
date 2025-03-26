@@ -41,6 +41,11 @@
 							<li><a href="#one">Mis proyectos</a></li>
 							<li><a href="#about">Sobre mí</a></li>
 							<li><a href="#" id="idioma-toggle" onclick="cambiarIdioma()">English Version</a></li>
+							<li>
+								<a id="cv-link" href="cv/CV_David_Valderrama_Español.pdf" download>📄 Descargar CV</a>
+							</li>
+							
+
 
 
 							
@@ -254,35 +259,37 @@
 
 			<script>
 			function cambiarIdioma() {
-	const textosEspanol = {
-		'Bienvenido, mi nombre es': 'Welcome, my name is',
-		'Desarrollador de Videojuegos': 'Video Game Developer',
-		'Estos son Proyectos que he realizado en mi proceso de desarrollo y aprendizaje': 'These are projects I have developed during my learning process',
-		'Juego Zombie Run': 'Zombie Run Game',
-		'Este es el primer juego que realicé en Unity. Consiste en que el zombie destruya todas las esferas y si estas te tocan se multiplican': 'This is the first game I made in Unity. It consists in the zombie being chased by spheres and if they touch you they multiply',
-		'Jugar': 'Play',
-		'Click_and_safe.py': 'Click_and_safe.py',
-		'Proyecto en Python para automatizar clics definidos por el usuario. Útil para tareas repetitivas y eficiencia.': 'Python project to automate clicks defined by the user. Useful for repetitive tasks and efficiency.',
-		'Repositorio': 'Repository',
-		'Mis Proyectos': 'My Projects',
-		'Mi nombre es David Valderrama Mosquera. Soy desarrollador de videojuegos y estudiante de Ingeniería de Sistemas.': 'My name is David Valderrama Mosquera. I am a video game developer and a Systems Engineering student.',
-		'Me especializo en el desarrollo de juegos 2D y 3D utilizando herramientas como:': 'I specialize in developing 2D and 3D games using tools such as:',
-		'Mi enfoque principal es crear experiencias únicas e inmersivas que cautiven a los jugadores.': 'My main focus is to create unique and immersive experiences that captivate players.',
-		'Habilidades:': 'Skills:',
-		'Desarrollo de videojuegos con Unity y C#.': 'Video game development with Unity and C#.',
-		'Gestión de herramientas en Kali Linux.': 'Tool management in Kali Linux.',
-		'Creación de páginas web con HTML y CSS.': 'Web page creation with HTML and CSS.',
-		'Creación de Scripts en Python.': 'Script creation in Python.',
-		'Sígueme': 'Follow me',
-		'Contacto': 'Contact',
-		'Inicio': 'Home',
-		'Mis proyectos': 'My Projects',
-		'Sobre mí': 'About me',
-		'Versión en Español': 'English Version',
-		'English Version': 'Versión en Español'
-	};
+				const textosEspanol = {
+					'Bienvenido, mi nombre es': 'Welcome, my name is',
+					'Desarrollador de Videojuegos': 'Video Game Developer',
+					'Estos son Proyectos que he realizado en mi proceso de desarrollo y aprendizaje': 'These are projects I have developed during my learning process',
+					'Juego Zombie Run': 'Zombie Run Game',
+					'Este es el primer juego que realicé en Unity. Consiste en que el zombie destruya todas las esferas y si estas te tocan se multiplican': 'This is the first game I made in Unity. It consists in the zombie being chased by spheres and if they touch you they multiply',
+					'Jugar': 'Play',
+					'Click_and_safe.py': 'Click_and_safe.py',
+					'Proyecto en Python para automatizar clics definidos por el usuario. Útil para tareas repetitivas y eficiencia.': 'Python project to automate clicks defined by the user. Useful for repetitive tasks and efficiency.',
+					'Repositorio': 'Repository',
+					'Mis Proyectos': 'My Projects',
+					'Mi nombre es David Valderrama Mosquera. Soy desarrollador de videojuegos y estudiante de Ingeniería de Sistemas.': 'My name is David Valderrama Mosquera. I am a video game developer and a Systems Engineering student.',
+					'Me especializo en el desarrollo de juegos 2D y 3D utilizando herramientas como:': 'I specialize in developing 2D and 3D games using tools such as:',
+					'Mi enfoque principal es crear experiencias únicas e inmersivas que cautiven a los jugadores.': 'My main focus is to create unique and immersive experiences that captivate players.',
+					'Habilidades:': 'Skills:',
+					'Desarrollo de videojuegos con Unity y C#.': 'Video game development with Unity and C#.',
+					'Gestión de herramientas en Kali Linux.': 'Tool management in Kali Linux.',
+					'Creación de páginas web con HTML y CSS.': 'Web page creation with HTML and CSS.',
+					'Creación de Scripts en Python.': 'Script creation in Python.',
+					'Sígueme': 'Follow me',
+					'Contacto': 'Contact',
+					'Inicio': 'Home',
+					'Mis proyectos': 'My Projects',
+					'Sobre mí': 'About me',
+					'Versión en Español': 'English Version',
+					'English Version': 'Versión en Español',
+					'📄 Descargar CV': '📄 Download CV'
+					
+				};
 
-	const textosIngles = Object.fromEntries(Object.entries(textosEspanol).map(([k, v]) => [v, k]));
+				const textosIngles = Object.fromEntries(Object.entries(textosEspanol).map(([k, v]) => [v, k]));
 
 	const boton = document.getElementById('idioma-toggle');
 	const idiomaActual = boton.textContent.trim();
@@ -299,8 +306,18 @@
 		});
 	});
 
-	// Cambiar el texto del botón
+	// Cambiar el texto del botón de idioma
 	boton.textContent = idiomaActual === 'English Version' ? 'Versión en Español' : 'English Version';
+
+	// ✅ Cambiar texto y archivo del botón de CV
+	const cvLink = document.getElementById('cv-link');
+	if (idiomaActual === 'English Version') {
+		cvLink.textContent = '📄 Download CV';
+		cvLink.href = 'cv/CV_David Valderrama_English.pdf';
+	} else {
+		cvLink.textContent = '📄 Descargar CV';
+		cvLink.href = 'cv/CV_David_Valderrama_Español.pdf';
+	}
 }
 
 			</script>

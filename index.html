@@ -74,7 +74,13 @@
     width: 100%;">
 					<div class="inner" style="display: flex; align-items: center; justify-content: space-between; gap: 50px; flex-wrap: nowrap; width: 100%;">
 						<div>
-							<div style="border: 4px solid rgb(255, 255, 255);background-color: rgb(0, 0, 0); padding: 15px; border-radius: 10px; display: inline-block;">
+							<div style=" border: 4px solid #fff;
+							background-color: #000;
+							padding: 15px 20px;
+							border-radius: 10px;
+							display: block;             /* antes estaba inline-block */
+							width: clamp(520px, 65vw, 700px);  /* más ancho y responsivo */
+							box-sizing: border-box;">
 								<h1 style="font-size: 2rem; color: #ad4897; margin: 0;">Bienvenido, mi nombre es<br><span style="color: #35578f;">David Valderrama</span></h1>
 							</div>
 							
@@ -85,7 +91,7 @@
 							border-radius: 10px;
 							display: inline-block;
 							margin-top: 10px;
-							width: 500px;         
+							width: 700px;         
 							max-width: 90%;       ">
 							<p style="font-size: 1rem; color: #ccc; margin: 5px 0 0; line-height: 1.5; font-family: 'Montserrat', sans-serif;">
     <span style="color: #ffcc00; font-weight: bold;">Desarrollador de Videojuegos</span>
@@ -100,13 +106,13 @@
     border-radius: 10px;
     display: inline-block;
     margin-top: 10px;
-    width: 500px;
+    width: 700px;
     max-width: 90%;
 ">
     <h2 style="color: #ffcc00; margin-top: 0; font-family: 'Montserrat', sans-serif; font-size: 1.3rem;">
         Acerca de mí
     </h2>
-    <p style="font-family: 'Montserrat', sans-serif; font-size: 1rem; color: #ccc; margin: 0; line-height: 1.5;">
+    <p id="about-desc" style="font-family: 'Montserrat', sans-serif; font-size: 1rem; color: #ccc; margin: 0; line-height: 1.5;">
         Soy un <strong>desarrollador de videojuegos</strong> especializado en <strong>Unity</strong> y <strong>C#</strong>, con un enfoque en crear experiencias interactivas atractivas y narrativas inmersivas. 
         Disfruto trabajar en proyectos que combinen creatividad y técnica, desde <strong>juegos 2D</strong> hasta <strong>simulaciones y entornos 3D</strong>.
         
@@ -175,7 +181,7 @@
 					<h3 style="color: #ffcc00; margin: 10px 0 0;">Shadows of Tomorrow</h3>
 
 					<!-- Tipo de proyecto -->
-					<p style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
+					<p id="shadows-type" style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
 						🧩 <strong>Tipo:</strong> Puzzle 2D narrativo
 					</p>
 
@@ -188,30 +194,30 @@
 					</div>
 
 					<!-- Descripción corta -->
-					<p style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
+					<p id="shadows-desc" style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
 						Juego de rompecabezas que alterna entre <strong>pasado</strong> y <strong>presente</strong> para resolver caminos y avanzar por el nivel.
 					</p>
 
 					<!-- Rol -->
-					<p style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
+					<p id="shadows-rol" style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
 						👤 <strong>Rol:</strong> Programación de mecánicas y gestión de audio (Audio Manager).
 					</p>
 
 					<!-- Logros -->
 					<div style="margin-top: 4px;">
-						<p style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
-						<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-						<li>Alternancia de estados de tiempo con triggers y feedback visual.</li>
-						<li>Sistema de audio contextual (eventos SFX y música por fase).</li>
+						<p id="shadows-logros-title" style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
+							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
+							<li id="shadows-logro-1">Alternancia de estados de tiempo con triggers y feedback visual.</li>
+							<li id="shadows-logro-2">Sistema de audio contextual (eventos SFX y música por fase).</li>
 						</ul>
 					</div>
 
 					<!-- Retos -->
 					<div>
-						<p style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
-						<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-						<li>Sincronizar lógica de puzzles entre dos líneas temporales.</li>
-						<li>Diseñar niveles legibles con aprendizaje progresivo.</li>
+						<p id="shadows-retos-title" style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
+							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
+							<li id="shadows-reto-1">Sincronizar lógica de puzzles entre dos líneas temporales.</li>
+							<li id="shadows-reto-2">Diseñar niveles legibles con aprendizaje progresivo.</li>
 						</ul>
 					</div>
 
@@ -225,14 +231,14 @@
 						
 
 						<!-- Proyecto 2 -->
-						<div style="border: 3px solid yellow; background-color: rgba(0,0,0,0.7); border-radius: 15px; padding: 20px; width: 400px; color: white; text-align: left; display: flex; flex-direction: column; gap: 8px;">
+					<div style="border: 3px solid yellow; background-color: rgba(0,0,0,0.7); border-radius: 15px; padding: 20px; width: 400px; color: white; text-align: left; display: flex; flex-direction: column; gap: 8px;">
 						<img src="https://img.itch.zone/aW1nLzIwNTQ0NjE4LnBuZw==/315x250%23c/nxg7sj.png" alt="Zombie Run" style="width: 100%; border-radius: 10px;">
 
 						<!-- Título -->
 						<h3 style="color: #ffcc00; margin: 10px 0 0;">Zombie Run</h3>
 
 						<!-- Tipo de proyecto -->
-						<p style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
+						<p id="zombie-type" style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
 							🧟 <strong>Tipo:</strong> Juego de acción arcade 3D
 						</p>
 
@@ -245,105 +251,108 @@
 						</div>
 
 						<!-- Descripción corta -->
-						<p style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
+						<p id="zombie-desc" style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
 							Juego en tercera persona donde controlas a un zombi dentro de un estadio, destruyendo esferas mediante una espada para evitar que se multipliquen.
 						</p>
 
 						<!-- Rol -->
-						<p style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
+						<p id="zombie-rol" style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
 							👤 <strong>Rol:</strong> Director y Generalista (modelado, programación y diseño de niveles).
 						</p>
 
 						<!-- Logros -->
 						<div style="margin-top: 4px;">
-							<p style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
+							<p id="zombie-logros-title" style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
 							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-							<li>Implementación de IA básica para comportamiento de enemigos.</li>
-							<li>Optimización de físicas para un gameplay fluido.</li>
+								<li id="zombie-logro-1">Implementación de IA básica para comportamiento de enemigos.</li>
+								<li id="zombie-logro-2">Optimización de físicas para un gameplay fluido.</li>
 							</ul>
 						</div>
 
 						<!-- Retos -->
 						<div>
-							<p style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
+							<p id="zombie-retos-title" style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
 							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-							<li>Balancear dificultad para mantener el interés del jugador.</li>
-							<li>Diseñar animaciones y transiciones coherentes con el personaje.</li>
+								<li id="zombie-reto-1">Balancear dificultad para mantener el interés del jugador.</li>
+								<li id="zombie-reto-2">Diseñar animaciones y transiciones coherentes con el personaje.</li>
 							</ul>
 						</div>
 
 						<!-- CTA -->
 						<a href="https://whineyparsley06.itch.io/zombie-run" target="_blank"
-						style="margin-top: auto; display: block; background-color: #ffcc00; color: black; padding: 8px 12px; border-radius: 8px; text-decoration: none; width: fit-content; margin-left: auto; margin-right: auto;">
-						Jugar
-					</a>
-						</div>
+							style="margin-top: auto; display: block; background-color: #ffcc00; color: black; padding: 8px 12px; border-radius: 8px; text-decoration: none; width: fit-content; margin-left: auto; margin-right: auto;">
+							Jugar
+						</a>
+					</div>
+
 
 						<!-- Proyecto 3 -->
-					<div style="border: 3px solid yellow; background-color: rgba(0,0,0,0.7); border-radius: 15px; padding: 20px; width: 400px; color: white; text-align: left; display: flex; flex-direction: column; gap: 8px;">
-					<img src="https://img.itch.zone/aW1nLzIwNTM4ODcxLnBuZw==/315x250%23c/Dxth%2Fb.png" alt="MultiEntity" style="width: 100%; border-radius: 10px;">
+						<div style="border: 3px solid yellow; background-color: rgba(0,0,0,0.7); border-radius: 15px; padding: 20px; width: 400px; color: white; text-align: left; display: flex; flex-direction: column; gap: 8px;">
+							<img src="https://img.itch.zone/aW1nLzIwNTM4ODcxLnBuZw==/315x250%23c/Dxth%2Fb.png" alt="MultiEntity" style="width: 100%; border-radius: 10px;">
 
-					<!-- Título -->
-					<h3 style="color: #ffcc00; margin: 10px 0 0;">MultiEntity</h3>
+							<!-- Título -->
+							<h3 style="color: #ffcc00; margin: 10px 0 0;">MultiEntity</h3>
 
-					<!-- Tipo de proyecto -->
-					<p style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
-						🧠 <strong>Tipo:</strong> Juego narrativo de exploración psicológica 3D
-					</p>
+							<!-- Tipo de proyecto -->
+							<p id="multi-type" style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
+								🧠 <strong>Tipo:</strong> Juego narrativo de exploración psicológica 3D
+							</p>
 
-					<!-- Tecnologías usadas -->
-					<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">
-						<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Unity</span>
-						<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">C#</span>
-						<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Audio Manager</span>
-						<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Git</span>
-					</div>
+							<!-- Tecnologías usadas -->
+							<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">
+								<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Unity</span>
+								<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">C#</span>
+								<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Audio Manager</span>
+								<span style="background:#0a0a23; color:#fff; border:1px solid #3a3a3a; padding:3px 8px; border-radius:8px; font-size:0.85rem;">Git</span>
+							</div>
 
-					<!-- Descripción corta -->
-					<p style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
-						Un viaje introspectivo que sumerge al jugador en la mente de un personaje con múltiples personalidades, cada una con habilidades y perspectivas únicas para interactuar con el mundo.
-					</p>
+							<!-- Descripción corta -->
+							<p id="multi-desc" style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
+								Un viaje introspectivo que sumerge al jugador en la mente de un personaje con múltiples personalidades, cada una con habilidades y perspectivas únicas para interactuar con el mundo.
+							</p>
 
-					<!-- Rol -->
-					<p style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
-						👤 <strong>Rol:</strong> Programación de mecánicas de juego y gestión de audio (Audio Manager).
-					</p>
+							<!-- Rol -->
+							<p id="multi-rol" style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
+								👤 <strong>Rol:</strong> Programación de mecánicas de juego y gestión de audio (Audio Manager).
+							</p>
 
-					<!-- Logros -->
-					<div style="margin-top: 4px;">
-						<p style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
-						<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-						<li>Implementación de sistema de cambio de personalidad con habilidades únicas.</li>
-						<li>Integración de audio dinámico que cambia según la personalidad activa.</li>
-						</ul>
-					</div>
+							<!-- Logros -->
+							<div style="margin-top: 4px;">
+								<p id="multi-logros-title" style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
+								<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
+									<li id="multi-logro-1">Implementación de sistema de cambio de personalidad con habilidades únicas.</li>
+									<li id="multi-logro-2">Integración de audio dinámico que cambia según la personalidad activa.</li>
+								</ul>
+							</div>
 
-					<!-- Retos -->
-					<div>
-						<p style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
-						<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-						<li>Diseñar transiciones suaves entre personalidades sin romper la inmersión.</li>
-						<li>Equilibrar el gameplay para que cada personalidad sea útil y divertida.</li>
-						</ul>
-					</div>
+							<!-- Retos -->
+							<div>
+								<p id="multi-retos-title" style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
+								<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
+									<li id="multi-reto-1">Diseñar transiciones suaves entre personalidades sin romper la inmersión.</li>
+									<li id="multi-reto-2">Equilibrar el gameplay para que cada personalidad sea útil y divertida.</li>
+								</ul>
+							</div>
 
-					<!-- CTA -->
-					<a href="https://jocabago.itch.io/multientity" target="_blank"
-						style="margin-top: auto; display: block; background-color: #ffcc00; color: black; padding: 8px 12px; border-radius: 8px; text-decoration: none; width: fit-content; margin-left: auto; margin-right: auto;">
-						Jugar
-					</a>
-					</div>
+							<!-- CTA -->
+							<a href="https://jocabago.itch.io/multientity" target="_blank"
+								style="margin-top: auto; display: block; background-color: #ffcc00; color: black; padding: 8px 12px; border-radius: 8px; text-decoration: none; width: fit-content; margin-left: auto; margin-right: auto;">
+								Jugar
+							</a>
+						</div>
+
 
 
 						<!-- Proyecto 4 -->
+						
 						<div style="border: 3px solid yellow; background-color: rgba(0,0,0,0.7); border-radius: 15px; padding: 20px; width: 850px; color: white; text-align: left; display: flex; flex-direction: column; gap: 8px;">
 						<img src="https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/6458d604829148153fb7cd52_codigo-python-beautiful-soup-p-800.jpg" alt="Click_and_safe.py" style="width: 100%; border-radius: 10px;">
 
-						<!-- Título -->
+						<!-- Título (puede quedar fijo si no quieres traducir el nombre) -->
 						<h3 style="color: #ffcc00; margin: 10px 0 0;">Click_and_safe.py</h3>
 
 						<!-- Tipo de proyecto -->
-						<p style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
+						<p id="click-type" style="margin: 0; font-size: 0.95rem; color: #bdbdbd;">
 							🖱️ <strong>Tipo:</strong> Script de automatización en Python
 						</p>
 
@@ -356,39 +365,41 @@
 						</div>
 
 						<!-- Descripción corta -->
-						<p style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
+						<p id="click-desc" style="margin: 6px 0 0; font-size: 0.96rem; line-height: 1.45; color:#e6e6e6;">
 							Herramienta desarrollada en Python para automatizar clics personalizados por el usuario, ideal para tareas repetitivas y mejorar la eficiencia en flujos de trabajo.
 						</p>
 
 						<!-- Rol -->
-						<p style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
+						<p id="click-rol" style="margin: 0; font-size: 0.95rem; color:#bdbdbd;">
 							👤 <strong>Rol:</strong> Programador y diseñador de la interfaz gráfica.
 						</p>
 
 						<!-- Logros -->
 						<div style="margin-top: 4px;">
-							<p style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
+							<p id="click-logros-title" style="margin:0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Logros</p>
 							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-							<li>Interfaz gráfica intuitiva para configurar clics.</li>
-							<li>Soporte para múltiples resoluciones y posiciones dinámicas.</li>
+							<li id="click-logro-1">Interfaz gráfica intuitiva para configurar clics.</li>
+							<li id="click-logro-2">Soporte para múltiples resoluciones y posiciones dinámicas.</li>
 							</ul>
 						</div>
 
 						<!-- Retos -->
 						<div>
-							<p style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
+							<p id="click-retos-title" style="margin:6px 0 0; color:#ffcc00; font-weight:700; font-size:0.95rem;">Retos</p>
 							<ul style="margin:4px 0 0 18px; padding:0; font-size:0.95rem; line-height:1.35;">
-							<li>Optimizar el consumo de recursos durante la ejecución continua.</li>
-							<li>Garantizar precisión de clics en diferentes entornos y pantallas.</li>
+							<li id="click-reto-1">Optimizar el consumo de recursos durante la ejecución continua.</li>
+							<li id="click-reto-2">Garantizar precisión de clics en diferentes entornos y pantallas.</li>
 							</ul>
 						</div>
 
 						<!-- CTA -->
 						<a href="https://github.com/WhineyParsley06/Save-and-click-program" target="_blank"
+							id="click-cta"
 							style="margin-top: auto; display: block; background-color: #ffcc00; color: black; padding: 8px 12px; border-radius: 8px; text-decoration: none; width: fit-content; margin-left: auto; margin-right: auto;">
 							Repositorio
 						</a>
-						</div>	
+						</div>
+
 
 
 					</div>
@@ -416,10 +427,10 @@
 						</p>
 						<h4 style="color: yellow; margin-top: 15px; text-align: left;">Habilidades:</h4>
 						<ul style="list-style: none; padding: 0; color: white; font-size: 1rem; line-height: 1.8; text-align: left;">
-							<li>🎮 Desarrollo de videojuegos con Unity y C#.</li>
-							<li>🛡 Gestión de herramientas en Kali Linux.</li>
-							<li>🌐 Creación de páginas web con HTML y CSS.</li>
-							<li>🐍 Creación de Scripts en Python.</li>
+								<li id="skill-unity">🎮 Desarrollo de videojuegos con Unity y C#.</li>
+								<li id="skill-kali">🛡 Gestión de herramientas en Kali Linux.</li>
+								<li id="skill-web">🌐 Creación de páginas web con HTML y CSS.</li>
+								<li id="skill-python">🐍 Creación de Scripts en Python.</li>
 						</ul>
 						<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; justify-content: start;">
 							<span style="background-color: black; color: white; padding: 4px 10px; border-radius: 5px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;" 
@@ -523,6 +534,8 @@
 					'• Especializado en Unity y C#': '• Specialized in Unity and C#',
 					'• Creador de mundos inmersivos': '• Creator of immersive worlds',
 					'• Apasionado por la narración interactiva': '• Passionate about interactive storytelling',
+					'Desarrollador de Videojuegos': 'Video Game Developer',
+					'Acerca de mí': 'About me',
 					'Creador de mundos inmersivos': 'Creator of immersive worlds',
 					'Estos son Proyectos que he realizado en mi proceso de desarrollo y aprendizaje': 'These are projects I have developed during my learning process',
 					'Es un juego de puzzle cuya intencion es mostrar los cambios entre los tiempos de pasado a presente': 'It is a puzzle game whose intention is to show the changes between past and present times',
@@ -561,7 +574,96 @@
 					'📄 Descargar CV': '📄 Download CV'
 					
 				};
-
+				const i18n = {
+				es: {
+					'shadows-type': '🧩 <strong>Tipo:</strong> Puzzle 2D narrativo',
+					'shadows-desc': 'Juego de rompecabezas que alterna entre <strong>pasado</strong> y <strong>presente</strong> para resolver caminos y avanzar por el nivel.',
+					'shadows-rol':  '👤 <strong>Rol:</strong> Programación de mecánicas y gestión de audio (Audio Manager).',
+					'shadows-logros-title': 'Logros',
+					'shadows-retos-title':  'Retos',
+					'shadows-logro-1': 'Alternancia de estados de tiempo con triggers y feedback visual.',
+					'shadows-logro-2': 'Sistema de audio contextual (eventos SFX y música por fase).',
+					'shadows-reto-1':  'Sincronizar lógica de puzzles entre dos líneas temporales.',
+					'shadows-reto-2':  'Diseñar niveles legibles con aprendizaje progresivo.',
+					'zombie-type': '🧟 <strong>Tipo:</strong> Juego de acción arcade 3D',
+					'zombie-desc': 'Juego en tercera persona donde controlas a un zombi dentro de un estadio, destruyendo esferas mediante una espada para evitar que se multipliquen.',
+					'zombie-rol': '👤 <strong>Rol:</strong> Director y Generalista (modelado, programación y diseño de niveles).',
+					'zombie-logros-title': 'Logros',
+					'zombie-logro-1': 'Implementación de IA básica para comportamiento de enemigos.',
+					'zombie-logro-2': 'Optimización de físicas para un gameplay fluido.',
+					'zombie-retos-title': 'Retos',
+					'zombie-reto-1': 'Balancear dificultad para mantener el interés del jugador.',
+					"multi-type": "🧠 <strong>Tipo:</strong> Juego narrativo de exploración psicológica 3D",
+					"multi-desc": "Un viaje introspectivo que sumerge al jugador en la mente de un personaje con múltiples personalidades, cada una con habilidades y perspectivas únicas para interactuar con el mundo.",
+					"multi-rol": "👤 <strong>Rol:</strong> Programación de mecánicas de juego y gestión de audio (Audio Manager).",
+					"multi-logros-title": "Logros",
+					"multi-logro-1": "Implementación de sistema de cambio de personalidad con habilidades únicas.",
+					"multi-logro-2": "Integración de audio dinámico que cambia según la personalidad activa.",
+					"multi-retos-title": "Retos",
+					"multi-reto-1": "Diseñar transiciones suaves entre personalidades sin romper la inmersión.",
+					"multi-reto-2": "Equilibrar el gameplay para que cada personalidad sea útil y divertida.",
+					"click-type": "🖱️ <strong>Tipo:</strong> Script de automatización en Python",
+					"click-desc": "Herramienta desarrollada en Python para automatizar clics personalizados por el usuario, ideal para tareas repetitivas y mejorar la eficiencia en flujos de trabajo.",
+					"click-rol": "👤 <strong>Rol:</strong> Programador y diseñador de la interfaz gráfica.",
+					"click-logros-title": "Logros",
+					"click-logro-1": "Interfaz gráfica intuitiva para configurar clics.",
+					"click-logro-2": "Soporte para múltiples resoluciones y posiciones dinámicas.",
+					"click-retos-title": "Retos",
+					"click-reto-1": "Optimizar el consumo de recursos durante la ejecución continua.",
+					"click-reto-2": "Garantizar precisión de clics en diferentes entornos y pantallas.",
+					"click-cta": "Repositorio",
+					"skill-unity": "🎮 Desarrollo de videojuegos con Unity y C#.",
+					"skill-kali": "🛡 Gestión de herramientas en Kali Linux.",
+					"skill-web": "🌐 Creación de páginas web con HTML y CSS.",
+					"skill-python": "🐍 Creación de Scripts en Python.",
+				},
+				en: {
+					'shadows-type': '🧩 <strong>Type:</strong> Narrative 2D Puzzle',
+					'shadows-desc': 'Puzzle game that switches between <strong>past</strong> and <strong>present</strong> to solve paths and progress through the level.',
+					'shadows-rol':  '👤 <strong>Role:</strong> Game mechanics programming and audio management (Audio Manager).',
+					'shadows-logros-title': 'Achievements',
+					'shadows-retos-title':  'Challenges',
+					'shadows-logro-1': 'Switching between time states with triggers and visual feedback.',
+					'shadows-logro-2': 'Contextual audio system (SFX events and phase-based music).',
+					'shadows-reto-1':  'Synchronize puzzle logic between two timelines.',
+					'shadows-reto-2':  'Design readable levels with progressive learning.',
+					'zombie-type': '🧟 <strong>Type:</strong> 3D Arcade Action Game',
+					'zombie-desc': 'Third-person game where you control a zombie inside a stadium, destroying spheres with a sword to prevent them from multiplying.',
+					'zombie-rol': '👤 <strong>Role:</strong> Director and Generalist (modeling, programming, and level design).',
+					'zombie-logros-title': 'Achievements',
+					'zombie-logro-1': 'Implemented basic AI for enemy behavior.',
+					'zombie-logro-2': 'Optimized physics for smooth gameplay.',
+					'zombie-retos-title': 'Challenges',
+					'zombie-reto-1': 'Balanced difficulty to keep the player engaged.',
+					'zombie-reto-2': 'Designed animations and transitions consistent with the character.',
+					"multi-type": "🧠 <strong>Type:</strong> 3D Narrative Psychological Exploration Game",
+					"multi-desc": "An introspective journey immersing the player in the mind of a character with multiple personalities, each with unique abilities and perspectives to interact with the world.",
+					"multi-rol": "👤 <strong>Role:</strong> Game mechanics programming and audio management (Audio Manager).",
+					"multi-logros-title": "Achievements",
+					"multi-logro-1": "Implementation of a personality-switching system with unique abilities.",
+					"multi-logro-2": "Integration of dynamic audio that changes according to the active personality.",
+					"multi-retos-title": "Challenges",
+					"multi-reto-1": "Design smooth transitions between personalities without breaking immersion.",
+					"multi-reto-2": "Balance gameplay so that each personality is useful and fun.",
+					"click-type": "🖱️ <strong>Type:</strong> Python Automation Script",
+					"click-desc": "A Python tool to automate user-defined clicks, ideal for repetitive tasks and improving workflow efficiency.",
+					"click-rol": "👤 <strong>Role:</strong> Programmer and UI designer.",
+					"click-logros-title": "Achievements",
+					"click-logro-1": "Intuitive GUI to configure clicks.",
+					"click-logro-2": "Support for multiple resolutions and dynamic positions.",
+					"click-retos-title": "Challenges",
+					"click-reto-1": "Optimize resource usage during continuous execution.",
+					"click-reto-2": "Ensure click accuracy across environments and screens.",
+					"click-cta": "Repository",
+					"skill-unity": "🎮 Video game development with Unity and C#.",
+					"skill-kali": "🛡 Tool management in Kali Linux.",
+					"skill-web": "🌐 Website creation with HTML and CSS.",
+					"skill-python": "🐍 Python script creation.",
+				}
+				};
+				
+				
+					
 				const textosIngles = Object.fromEntries(Object.entries(textosEspanol).map(([k, v]) => [v, k]));
 
 	const boton = document.getElementById('idioma-toggle');
@@ -578,6 +680,39 @@
 			}
 		});
 	});
+	// Traducción por IDs con HTML
+    Object.keys(i18n.es).forEach(key => {
+        const node = document.getElementById(key);
+        if (node) {
+            node.innerHTML = (idiomaActual === 'English Version') ? i18n.en[key] : i18n.es[key];
+        }
+    });
+
+
+
+	const aboutEs = `Soy un <strong>desarrollador de videojuegos</strong> especializado en <strong>Unity</strong> y <strong>C#</strong>, con un enfoque en crear experiencias interactivas atractivas y narrativas inmersivas. 
+    Disfruto trabajar en proyectos que combinen creatividad y técnica, desde <strong>juegos 2D</strong> hasta <strong>simulaciones y entornos 3D</strong>.`;
+
+	// Traducción del bloque "about-desc"
+	// Usando innerHTML para mantener el formato HTML
+	// y los estilos de negrita
+	// y otros elementos HTML.		
+
+
+
+    const aboutEn = `I am a <strong>video game developer</strong> specialized in <strong>Unity</strong> and <strong>C#</strong>, with a focus on creating engaging interactive experiences and immersive narratives. 
+    I enjoy working on projects that combine creativity and technical skills, from <strong>2D games</strong> to <strong>3D simulations and environments</strong>.`;
+
+    const aboutNode = document.getElementById('about-desc');
+    if (aboutNode) {
+        aboutNode.innerHTML = (idiomaActual === 'English Version') ? aboutEn : aboutEs;
+    }
+
+	const shadowsType = document.getElementById('shadows-type');
+	if (shadowsType) {
+		shadowsType.innerHTML = i18n[idiomaActual === 'English Version' ? 'en' : 'es']['shadows-type'];
+	}
+
 
 	// Cambiar el texto del botón de idioma
 	boton.textContent = idiomaActual === 'English Version' ? 'Versión en Español' : 'English Version';
@@ -592,6 +727,8 @@
 		cvLink.href = 'cv/CV_David_Valderrama_Español.pdf';
 	}
 }
+
+
 
 			</script>
 			
